@@ -9,21 +9,30 @@ const btn_principal = document.querySelector("#principal");
 
 
 btn_home.addEventListener("click", (evt)=>{
-  window.open("./home.html", "if_principal");
+  abrirPagina(evt.target, "./home.html");  
 });
 
 btn_novo.addEventListener("click", (evt)=>{
-  window.open("./novo.html", "if_principal");
+  abrirPagina(evt.target, "./novo.html");  
 });
 
 btn_pesquisar.addEventListener("click", (evt)=>{
-  window.open("./pesquisar.html", "if_principal");
+  abrirPagina(evt.target, "./pesquisar.html"); 
 });
 
 btn_gestao.addEventListener("click", (evt)=>{
-  window.open("./gestao.html", "if_principal");
+  abrirPagina(evt.target, "./gestao.html"); 
 });
 
 btn_sobre.addEventListener("click", (evt)=>{
-  window.open("./sobre.html", "if_principal");
+  abrirPagina(evt.target, "./sobre.html"); 
 });
+
+const abrirPagina=(el, url)=>{
+  const abas=[...document.querySelectorAll(".aba")];
+  abas.forEach(e=>{
+    e.classList.remove("abaSelecionada");
+  });
+  el.classList.add("avaSelecionada");
+  window.open(url, "if_principal");
+}
