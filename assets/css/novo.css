@@ -1,0 +1,27 @@
+#novo{
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.elementosForm{
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+align-items: flex-start;
+width: 80%;
+border: 1px solid #f00;
+}
+
+.campoForm{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.botoesForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
