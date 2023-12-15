@@ -13,4 +13,17 @@ btn_gravar.addEventListener("click", (evt)=>{
     "f_email":f_email.value,
     "f_dtnasc":f_dtnasc.value
   }
+  const cabecalho={
+    method:'POST',
+    body:JSON.stringify(dados)
+  }
+  const endpoint="https://127.0.0.1:1880/addcontatos"
+  fetch(endpoint,cabecalho)
+  then(res=>{
+    if(res.status==200){
+      console.log("OK");
+    }else{
+      alert("Erro ao gravar novo contato");
+    }
+  })
 });
