@@ -17,7 +17,7 @@ btn_gravar.addEventListener("click", (evt)=>{
     method:'POST',
     body:JSON.stringify(dados)
   }
-  const endpoint="https://127.0.0.1:1880/addcontatos"
+  const endpoint="https://127.0.0.1:1880/addcontato"
   fetch(endpoint,cabecalho)
   then(res=>{
     if(res.status==200){
