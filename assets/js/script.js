@@ -33,6 +33,6 @@ const abrirPagina=(el, url)=>{
   abas.forEach(e=>{
     e.classList.remove("abaSelecionada");
   });
-  el.classList.add("avaSelecionada");
+  el.classList.add("abaSelecionada");
   window.open(url, "if_principal");
 }
